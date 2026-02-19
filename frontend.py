@@ -4,7 +4,7 @@ import json
 import pandas as pd
 
 # --- CONFIGURATION ---
-API_URL = "http://localhost:8000"
+API_URL = "/api"
 
 st.set_page_config(page_title="Skylark Agent", page_icon="✈️", layout="wide")
 
@@ -123,4 +123,5 @@ if prompt := st.chat_input("E.g., Book a mapping drone in Bangalore for next wee
                 else:
                     st.error(f"Error: {response.status_code}")
             except Exception as e:
+
                 st.error(f"Connection Failed: {e}")
